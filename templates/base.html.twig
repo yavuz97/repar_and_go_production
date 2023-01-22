@@ -126,8 +126,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
 
-        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+{#        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />#}
+{#        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>#}
 
 {#        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>#}
 
@@ -136,13 +136,12 @@
 
     <body>
 
-    <div class="row mt-2 mb-2 baseSearchBar">
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <a class="navbar-brand" href="{{ path("home") }}"> <img class="logo" src="{{ asset("build/general/logo_reparAndGo.png") }}" alt="logo">   </a>
-        </div>
+{#    <div class="row mt-2 mb-2 baseSearchBar">#}
+{#        <div class="col-lg-4 col-md-6 col-sm-6">#}
+{#            <a class="navbar-brand" href="{{ path("home") }}"> <img class="logo" src="{{ asset("build/general/logo_reparAndGo.png") }}" alt="logo">   </a>#}
+{#        </div>#}
 {#        <div class="col-lg-8 col-md-6 col-sm-6 searchBarCol " >#}
-{#            <select  class="w-100 js-example-basic-single js-states form-control searchProd" style="    width: 50%;#}
-{#    margin-top: 32px; ">#}
+{#            <select  class="w-100 js-example-basic-single js-states form-control searchProd" style="    width: 50%;  margin-top: 32px; ">#}
 {#                <option value="" disabled selected>Trouver mon appareil</option>#}
 
 {#                {% for marque in marques %}#}
@@ -153,59 +152,59 @@
 
 {#                {% endfor %}#}
 {#            </select>#}
-        </div>
-    </div>
+{#        </div>#}
+{#    </div>#}
     <nav class="main navbar navbar-expand-lg" >
         <span id="id_responsiveMenuBar" class="responsiveMenuBar" >&#9776; </span>
-        <a class=" " href="{{ path("home") }}"> <img class="logoMobile" src="{{ asset("build/general/logo.png") }}" alt="logo">   </a>
+        <a aria-label="page accueille" class=" " href="{{ path("home") }}"> <img class="logoMobile" src="{{ asset("build/general/logo.png") }}" alt="logo">   </a>
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li  class="nav-item fade-service">
-                    <a style="margin-left: 67px;" class="nav-link" href="{{ path("list-marques") }}">Réparations  <span class="sr-only">(current)</span> </a>
-                    <div class="menuPhone" style="width: 180px;margin-left: 67px;" >
-                        <div class="mt-2"></div>
-                        {% for marque in marques %}
-                            {% if marque.produits | length > 0 %}
-                                <a class="text-decoration-none text-dark " href="{{ path("list-produits-marque",{'id':marque.id}) }}">  <h6 class="menuPhoneTitle" style="    margin-top: 10px;"><strong>{{ marque.nom }}</strong> </h6> </a>
-                                <hr style="border: 0;
-            border-top: 1px solid rgba(0,0,0,.1);
-            width: 88%;
-            float: left;
-            margin-bottom: -6px;
-            margin-top: 12px;" >
-                                    <div class="list-item-drop" style="margin-bottom: 10px;">
-                                            {% for serie in marque.series  %}
-                                                {% if serie.produits | length > 0 %}
-                                                <a  href="{{ path("seriePhone",{'id':serie.id}) }}"> <p class="fw-light menuPhoneSub"> {{serie.nom}} </p> </a>
-                                                {% endif %}
-                                            {% endfor %}
-                                    </div>
-                             {% endif %}
-                        {% endfor %}
+                    <a aria-label="liste des marques" style="margin-left: 67px;" class="nav-link" href="{{ path("list-marques") }}">Réparations  <span class="sr-only">(current)</span> </a>
+{#                    <div class="menuPhone" style="width: 180px;margin-left: 67px;" >#}
+{#                        <div class="mt-2"></div>#}
+{#                        {% for marque in marques %}#}
+{#                            {% if marque.produits | length > 0 %}#}
+{#                                <a class="text-decoration-none text-dark " href="{{ path("list-produits-marque",{'id':marque.id}) }}">  <h6 class="menuPhoneTitle" style="    margin-top: 10px;"><strong>{{ marque.nom }}</strong> </h6> </a>#}
+{#                                <hr style="border: 0;#}
+{#            border-top: 1px solid rgba(0,0,0,.1);#}
+{#            width: 88%;#}
+{#            float: left;#}
+{#            margin-bottom: -6px;#}
+{#            margin-top: 12px;" >#}
+{#                                    <div class="list-item-drop" style="margin-bottom: 10px;">#}
+{#                                            {% for serie in marque.series  %}#}
+{#                                                {% if serie.produits | length > 0 %}#}
+{#                                                <a  href="{{ path("seriePhone",{'id':serie.id}) }}"> <p class="fw-light menuPhoneSub"> {{serie.nom}} </p> </a>#}
+{#                                                {% endif %}#}
+{#                                            {% endfor %}#}
+{#                                    </div>#}
+{#                             {% endif %}#}
+{#                        {% endfor %}#}
 
-                    </div>
+{#                    </div>#}
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path("reparationOrdinateur") }}">Ordinateur / Macbook </a>
+                    <a aria-label="Réparation ordinateur macbook" class="nav-link" href="{{ path("reparationOrdinateur") }}">Ordinateur / Macbook </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path("reparationTablette") }}">Tablette / Ipad </a>
+                    <a aria-label="Réparation tablette ipad" class="nav-link" href="{{ path("reparationTablette") }}">Tablette / Ipad </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path("clesMinute") }}">Clés minute</a>
+                    <a aria-label="service clés minute" class="nav-link" href="{{ path("clesMinute") }}">Clés minute</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path("contact") }}">Contact </a>
+                    <a aria-label="page de contact" class="nav-link" href="{{ path("contact") }}">Contact </a>
                 </li>
                 <li class="nav-item dropdown position-absolute end-0 me-5 ">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a aria-label="mon compte" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa fa-user-circle-o me-3" aria-hidden="true"></i>Compte
                     </a>
                     <ul class="dropdown-menu mt-1 " aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item text-dark" href="{{ path('security_login') }}">Connection</a></li>
-                        <li><a class="dropdown-item text-dark " href="{{ path('registration') }}">Créer un compte</a></li>
+                        <li><a aria-label="login" class="dropdown-item text-dark" href="{{ path('security_login') }}">Connection</a></li>
+                        <li><a aria-label="Créer un compte" class="dropdown-item text-dark " href="{{ path('registration') }}">Créer un compte</a></li>
                     </ul>
                 </li>
 
@@ -214,19 +213,19 @@
         </div>
     </nav>
     <div id="mySidenav" class="sidenav">
-        <a id="closeNavBar"  href="javascript:void(0)" class="closebtn" >&times;</a>
-        <a class="respMenuLink" href="{{ path("list-marques") }}">Réparations </a>
-        <a class="respMenuLink" href="{{ path("reparationOrdinateur") }}">Ordinateur / Macbook </a>
-        <a class="respMenuLink" href="{{ path("reparationTablette") }}">Tablette / Ipad </a>
-        <a class="respMenuLink" href="{{ path("clesMinute") }}">Clés minute</a>
-        <a class="respMenuLink" href="{{ path("contact") }}">Contact </a>
+        <a aria-label="Fermer le menu" id="closeNavBar"  href="javascript:void(0)" class="closebtn" >&times;</a>
+        <a aria-label="Réparations" class="respMenuLink" href="{{ path("list-marques") }}">Réparations </a>
+        <a aria-label="Réparation ordinateur macbook" class="respMenuLink" href="{{ path("reparationOrdinateur") }}">Ordinateur / Macbook </a>
+        <a aria-label="Réparation tablette ipad" class="respMenuLink" href="{{ path("reparationTablette") }}">Tablette / Ipad </a>
+        <a aria-label="service clés minute" class="respMenuLink" href="{{ path("clesMinute") }}">Clés minute</a>
+        <a aria-label="page de contact" class="respMenuLink" href="{{ path("contact") }}">Contact </a>
     </div>
 
 
 
 
     {% block body %}{% endblock %}
-    <footer id="footer" class="page-footer font-small cyan darken-3">
+    <footer id="footer" class="page-footer font-small cyan darken-3 ">
 
         <!-- Footer Elements -->
         <div class="container ">
@@ -298,22 +297,21 @@
                                     </div>
                                 </div>
                             </div>
-                            <div  style="    width: 100%;  height: 106%;  margin-left: 27px;">
-                                <a target="_blank" href="https://www.google.com/maps/place/R%C3%A9par'+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+%26+Ordinateur+%26+Tablette/@49.1158957,6.1719842,394m/data=!3m1!1e3!4m5!3m4!1s0x0:0x3577dc2fb7cc5cd1!8m2!3d49.1161085!4d6.1723196?hl=fr">   <img style="    object-fit: cover;height: 171px;width: 100%;" src="{{ asset("build/general/googleMaps.png") }}" alt="googleMaps"></a>
-                            </div>
+{#                            <div  style="    width: 100%;  height: 106%;  margin-left: 27px;">#}
+{#                                <a target="_blank" href="https://www.google.com/maps/place/R%C3%A9par'+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+%26+Ordinateur+%26+Tablette/@49.1158957,6.1719842,394m/data=!3m1!1e3!4m5!3m4!1s0x0:0x3577dc2fb7cc5cd1!8m2!3d49.1161085!4d6.1723196?hl=fr">   <img style="    object-fit: cover;height: 171px;width: 100%;" src="{{ asset("build/general/googleMaps.png") }}" alt="googleMaps"></a>#}
+{#                            </div>#}
                         </div>
 
                     </div>
                     <div class="row mt-5">
                         <div class="col-12 d-flex justify-content-start">
-                           <a href="https://www.facebook.com/reparngo" class="me-5 text-white">  <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i> </a>
-                           <a href="https://www.instagram.com/reparandgometz/" class="me-5 text-white" > <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i> </a>
-                           <a href="https://www.google.com/search?q=R%C3%A9par%27+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+&client=firefox-b-d&sxsrf=ALeKk00hOxaW-GT5bYDQf_peK-qxXqswrQ%3A1620656812870&ei=rEKZYLS1NPKA9u8PqP-m8AY&oq=R%C3%A9par%27+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+&gs_lcp=Cgdnd3Mtd2l6EAMyCwgAEMcBEK8BEMsBMgIIJjoHCAAQRxCwA1C4NVi4NWCHOWgBcAJ4AIABwQuIAeAMkgEHMC4xLjctMZgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz&ved=0ahUKEwi0u4iNqb_wAhVygP0HHai_CW4Q4dUDCA4&uact=5" class="text-white">  <i class="fa fa-google-plus-official fa-lg white-text mr-md-5 mr-3 fa-2x"> </i> </a>
+                           <a aria-label="lien vers facebook" href="https://www.facebook.com/reparngo" class="me-5 text-white">  <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i> </a>
+                           <a aria-label="lien vers instagram" href="https://www.instagram.com/reparandgometz/" class="me-5 text-white" > <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i> </a>
+                           <a aria-label="lien vers google " href="https://www.google.com/search?q=R%C3%A9par%27+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+&client=firefox-b-d&sxsrf=ALeKk00hOxaW-GT5bYDQf_peK-qxXqswrQ%3A1620656812870&ei=rEKZYLS1NPKA9u8PqP-m8AY&oq=R%C3%A9par%27+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+&gs_lcp=Cgdnd3Mtd2l6EAMyCwgAEMcBEK8BEMsBMgIIJjoHCAAQRxCwA1C4NVi4NWCHOWgBcAJ4AIABwQuIAeAMkgEHMC4xLjctMZgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz&ved=0ahUKEwi0u4iNqb_wAhVygP0HHai_CW4Q4dUDCA4&uact=5" class="text-white">  <i class="fa fa-google-plus-official fa-lg white-text mr-md-5 mr-3 fa-2x"> </i> </a>
                         </div>
                     </div>
 
                 </div>
-
             </div>
 
             <div class="row mt-5">
@@ -324,10 +322,10 @@
 
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a> reparandgo.com</a>
+            <span> reparandgo</span>
         </div>
         <div class="footer-copyright text-left py-3">
-            <p class="fs-6 ms-5 fst-italic"> <a class="text-decoration-none" href="{{ path('mentionsLegales') }}"> Mention légales </a>    </p>
+            <p class="fs-6 ms-5 fst-italic"> <a aria-label="lien vers mention legales" class="text-decoration-none" href="{{ path('mentionsLegales') }}"> Mention légales </a>    </p>
         </div>
         <!-- Copyright -->
 
@@ -340,211 +338,37 @@
 <script>
 
 
-    /*
-    Copyright 2014 Google Inc. All rights reserved.
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-    */
-
-    (function(window) {
-
-        if (!!window.cookieChoices) {
-            return window.cookieChoices;
-        }
-
-        var document = window.document;
-        // IE8 does not support textContent, so we should fallback to innerText.
-        var supportsTextContent = 'textContent' in document.body;
-
-        var cookieChoices = (function() {
-
-            var cookieName = 'displayCookieConsent';
-            var cookieConsentId = 'cookieChoiceInfo';
-            var dismissLinkId = 'cookieChoiceDismiss';
-
-            function _createHeaderElement(cookieText, dismissText, linkText, linkHref) {
-                var butterBarStyles = 'position:fixed;width:100%;background-color:rgb(56 56 56);color:#F5F5F5;' +
-                    'margin:0; left:0; bottom:0; padding:5px;z-index:1000;text-align:center;font-size: 14px;';
-
-                var cookieConsentElement = document.createElement('div');
-                cookieConsentElement.id = cookieConsentId;
-                cookieConsentElement.style.cssText = butterBarStyles;
-                cookieConsentElement.appendChild(_createConsentText(cookieText));
-
-                if (!!linkText && !!linkHref) {
-                    cookieConsentElement.appendChild(_createInformationLink(linkText, linkHref));
-                }
-                cookieConsentElement.appendChild(_createDismissLink(dismissText));
-
-                return cookieConsentElement;
-            }
-
-            function _createDialogElement(cookieText, dismissText, linkText, linkHref) {
-                var glassStyle = 'position:fixed;width:100%;height:100%;z-index:999;' +
-                    'top:0;left:0;opacity:0.5;filter:alpha(opacity=50);' +
-                    'background-color:#ccc;';
-                var dialogStyle = 'z-index:1000;position:fixed;left:50%;top:50%';
-                var contentStyle = 'position:relative;left:-50%;margin-top:-25%;' +
-                    'background-color:#fff;padding:20px;box-shadow:4px 4px 25px #888;';
-
-                var cookieConsentElement = document.createElement('div');
-                cookieConsentElement.id = cookieConsentId;
-
-                var glassPanel = document.createElement('div');
-                glassPanel.style.cssText = glassStyle;
-
-                var content = document.createElement('div');
-                content.style.cssText = contentStyle;
-
-                var dialog = document.createElement('div');
-                dialog.style.cssText = dialogStyle;
-
-                var dismissLink = _createDismissLink(dismissText);
-                dismissLink.style.display = 'block';
-                dismissLink.style.textAlign = 'right';
-                dismissLink.style.marginTop = '8px';
-
-                content.appendChild(_createConsentText(cookieText));
-                if (!!linkText && !!linkHref) {
-                    content.appendChild(_createInformationLink(linkText, linkHref));
-                }
-                content.appendChild(dismissLink);
-                dialog.appendChild(content);
-                cookieConsentElement.appendChild(glassPanel);
-                cookieConsentElement.appendChild(dialog);
-                return cookieConsentElement;
-            }
-
-            function _setElementText(element, text) {
-                if (supportsTextContent) {
-                    element.textContent = text;
-                } else {
-                    element.innerText = text;
-                }
-            }
-
-            function _createConsentText(cookieText) {
-                var consentText = document.createElement('span');
-                _setElementText(consentText, cookieText);
-                return consentText;
-            }
-
-            function _createDismissLink(dismissText) {
-                var dismissLink = document.createElement('a');
-                _setElementText(dismissLink, dismissText);
-                dismissLink.id = dismissLinkId;
-                dismissLink.href = '#';
-                dismissLink.style.marginLeft = '15px';
-                dismissLink.style.color = '#F5F5F5';
-                return dismissLink;
-            }
-
-            function _createInformationLink(linkText, linkHref) {
-                var infoLink = document.createElement('a');
-                _setElementText(infoLink, linkText);
-                infoLink.href = linkHref;
-                infoLink.target = '_blank';
-                infoLink.style.marginLeft = '15px';
-                infoLink.style.fontsize = '12px';
-                infoLink.style.color = '#F5F5F5';
-                return infoLink;
-            }
-
-            function _dismissLinkClick() {
-                _saveUserPreference();
-                _removeCookieConsent();
-                return false;
-            }
-
-            function _showCookieConsent(cookieText, dismissText, linkText, linkHref, isDialog) {
-                if (_shouldDisplayConsent()) {
-                    _removeCookieConsent();
-                    var consentElement = (isDialog) ?
-                        _createDialogElement(cookieText, dismissText, linkText, linkHref) :
-                        _createHeaderElement(cookieText, dismissText, linkText, linkHref);
-                    var fragment = document.createDocumentFragment();
-                    fragment.appendChild(consentElement);
-                    document.body.appendChild(fragment.cloneNode(true));
-                    document.getElementById(dismissLinkId).onclick = _dismissLinkClick;
-                }
-            }
-
-            function showCookieConsentBar(cookieText, dismissText, linkText, linkHref) {
-                _showCookieConsent(cookieText, dismissText, linkText, linkHref, false);
-            }
-
-            function showCookieConsentDialog(cookieText, dismissText, linkText, linkHref) {
-                _showCookieConsent(cookieText, dismissText, linkText, linkHref, true);
-            }
-
-            function _removeCookieConsent() {
-                var cookieChoiceElement = document.getElementById(cookieConsentId);
-                if (cookieChoiceElement != null) {
-                    cookieChoiceElement.parentNode.removeChild(cookieChoiceElement);
-                }
-            }
-
-            function _saveUserPreference() {
-                // Set the cookie expiry to one year after today.
-                var expiryDate = new Date();
-                expiryDate.setMonth(expiryDate.getMonth() + 6);
-                document.cookie = cookieName + '=y; path=/; expires=' + expiryDate.toGMTString();
-            }
-
-            function _shouldDisplayConsent() {
-                // Display the header only if the cookie has not been set.
-                return !document.cookie.match(new RegExp(cookieName + '=([^;]+)'));
-            }
-
-            var exports = {};
-            exports.showCookieConsentBar = showCookieConsentBar;
-            exports.showCookieConsentDialog = showCookieConsentDialog;
-            return exports;
-        })();
-
-        window.cookieChoices = cookieChoices;
-        return cookieChoices;
-    })(this);
 </script>
     <script>document.addEventListener('DOMContentLoaded', function(event){cookieChoices.showCookieConsentBar('Ce site utilise des cookies pour vous offrir le meilleur service. En poursuivant votre navigation, vous acceptez l’utilisation des cookies.', 'J’accepte', 'En savoir plus', 'https://reparandgo.com/mentionsLegales');});</script>
- <script>
+{# <script>#}
 
-//     $('.js-example-basic-single').one('select2:open', function(e) {
-//         $('input.select2-search__field').prop('placeholder', 'Trouver mon appareil..');
-//
-//     });
-         $(".searchProd").select2({
-         width: 'resolve' // need to override the changed default
-     });
-         $(".searchProd").select2({
-             theme: "classic"
-         });
-         $(".searchProd").select2({ dropdownCssClass: "myFont" });
+{#//     $('.js-example-basic-single').one('select2:open', function(e) {#}
+{#//         $('input.select2-search__field').prop('placeholder', 'Trouver mon appareil..');#}
+{#//#}
+{#//     });#}
+{#         $(".searchProd").select2({#}
+{#         width: 'resolve' // need to override the changed default#}
+{#     });#}
+{#         $(".searchProd").select2({#}
+{#             theme: "classic"#}
+{#         });#}
+{#         $(".searchProd").select2({ dropdownCssClass: "myFont" });#}
 
-         $(".searchProd").select2({ sel: "myFont" });
+{#         $(".searchProd").select2({ sel: "myFont" });#}
 
-         $(".searchProdMobile").select2({ dropdownCssClass: "myFontMobile" });
-         $(".searchProdMobile").select2({ sel: "myFontMobile" });
-         $(".searchProdMobile").select2({
-             width: 'resolve' // need to override the changed default
-         });
+{#         $(".searchProdMobile").select2({ dropdownCssClass: "myFontMobile" });#}
+{#         $(".searchProdMobile").select2({ sel: "myFontMobile" });#}
+{#         $(".searchProdMobile").select2({#}
+{#             width: 'resolve' // need to override the changed default#}
+{#         });#}
 
-         $(".searchProd").on("select2:select", function (e) {
-             console.log("https:/" + e.params.data.id);
-             window.open("https://reparandgo.com/produit_show/" + e.params.data.id);
-             // window.open('https://www.codexworld.com', '_blank');
+{#         $(".searchProd").on("select2:select", function (e) {#}
+{#             console.log("https:/" + e.params.data.id);#}
+{#             window.open("https://reparandgo.com/produit_show/" + e.params.data.id);#}
+{#             // window.open('https://www.codexworld.com', '_blank');#}
 
-         });
- </script>
+{#         });#}
+{# </script>#}
     </body>
 </html>

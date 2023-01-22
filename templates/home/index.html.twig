@@ -6,6 +6,8 @@
     <meta name="description" content="Réparez vos téléphones en 20 minutes. Ecran cassé ? On  remplace rapidement les d'écrans d'iphone, Samsung, Xiaomi, Oppo... Nous solutionnons les problèmes
                 de batterie ou boutons smartphone. Réparation d'ordinateur et tablette. Vente d'accessoires téléphone.
                 achat et vente des smartphones : Repar and go ">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
 
     <meta name="robots" content="index,follow"/>
 {% endblock %}
@@ -16,145 +18,97 @@
                 position: relative;
                 right: 71px;
                 top: -16px;
-                width: 601px;
+                width: 62%;
             }
             .googleImageAndTextContainer div {
-                font-size: 79px;
+                font-size: 29px;
                 font-weight: 300;
                 margin-bottom: 15px;
                 margin-top: 17px;
             }
-            .yav-container {
-                padding: 6px 0 151px;
-            }
+            /*.yav-container {*/
+            /*    padding: 6px 0 151px;*/
+            /*}*/
             .googleImageAndTextContainer a {
-                font-size: 31px;
-                left: 63px;
+                font-size: 19px;
+                left: -40px;
                 position: relative;
-                top: -22px;
+                top: -11px;
+                color: white;
             }
             #homePageDarkContainer{
                 margin-bottom: 70px;
             }
         }
 
-        #homeCliesMinuteButton, button::after {
-            width: 380px;
+        #homeCliesMinuteButton {
+            width: 303px;
             height: 86px;
-            font-size: 36px;
-            font-family: 'Bebas Neue', cursive;
+            font-size: 24px;
             background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
             border: 0;
             color: #fff;
             letter-spacing: 3px;
             line-height: 88px;
-            box-shadow: 6px 0px 0px #00E6F6;
+            box-shadow: 6px 0 0 #00e6f6;
             outline: transparent;
             position: relative;
         }
 
-        #homeCliesMinuteButton::after {
-            --slice-0: inset(50% 50% 50% 50%);
-            --slice-1: inset(80% -6px 0 0);
-            --slice-2: inset(50% -6px 30% 0);
-            --slice-3: inset(10% -6px 85% 0);
-            --slice-4: inset(40% -6px 43% 0);
-            --slice-5: inset(80% -6px 5% 0);
 
-            content: 'AVAILABLE NOW';
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
-            text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
-            clip-path: var(--slice-0);
-        }
 
-        #homeCliesMinuteButton:hover::after {
-            animation: 1s glitch;
-            animation-timing-function: steps(2, end);
-        }
 
-        @keyframes glitch {
-            0% {
-                clip-path: var(--slice-1);
-                transform: translate(-20px, -10px);
-            }
-            10% {
-                clip-path: var(--slice-3);
-                transform: translate(10px, 10px);
-            }
-            20% {
-                clip-path: var(--slice-1);
-                transform: translate(-10px, 10px);
-            }
-            30% {
-                clip-path: var(--slice-3);
-                transform: translate(0px, 5px);
-            }
-            40% {
-                clip-path: var(--slice-2);
-                transform: translate(-5px, 0px);
-            }
-            50% {
-                clip-path: var(--slice-3);
-                transform: translate(5px, 0px);
-            }
-            60% {
-                clip-path: var(--slice-4);
-                transform: translate(5px, 10px);
-            }
-            70% {
-                clip-path: var(--slice-2);
-                transform: translate(-10px, 10px);
-            }
-            80% {
-                clip-path: var(--slice-5);
-                transform: translate(20px, -10px);
-            }
-            90% {
-                clip-path: var(--slice-1);
-                transform: translate(-10px, 0px);
-            }
-            100% {
-                clip-path: var(--slice-1);
-                transform: translate(0);
-            }
-        }
 
         .home-hero{
-            display: none;
+            position: relative;
+            height: 50vh;
+            overflow: hidden;
+            background: url(https://reparandgo.com/build/general/homeHeroWomen.4e942a18.png) no-repeat center;
+            background-size: cover;
+            background-position-x: 0;
+            margin-bottom: 7px;
         }
+
+        .home-hero-container{
+            position: absolute;
+            right: 9%;
+            text-align: left;
+            color: white;
+            text-transform: uppercase;
+            font-family: 'Poppins', serif;
+            top: 27%;
+        }
+        #homeHeroTitle{
+            font-weight: 700;
+            margin-top: -11%;
+
+        }
+        .home-hero-container h1{
+            font-family: sans-serif;
+            font-size: 81px;
+            letter-spacing: 0.2rem;
+            margin: 0;
+            text-shadow: 0 0 10px #00000054;
+        }
+
         @media only screen
         and (min-device-width : 320px)
         and (max-device-width : 480px) {
-            #phoneScroll {
-                display: none;
-            }
-            .home-hero{
-                display: block;
-            }
-            .btnLgMobile{
-                display: block;
-            }
+
             .home-hero{
                 position: relative;
-                height: 50vh;
+                height: 56vh;
                 overflow: hidden;
-                /*background: url(https://reparandgo.com/build/general/homeHeroWomen.4e942a18.png) no-repeat center;*/
                 background: url(https://reparandgo.com/build/general/homeHeroWomen.4e942a18.png) no-repeat center;
                 background-size: cover;
                 background-position-x: 0;
-                margin-bottom: 90px;
+                margin-bottom: 7px;
             }
             .home-hero-container{
                 position: absolute;
-                top: 50%;
+                top: 9%;
                 right: 0;
-                transform: translate(0, -170%);
+                /*transform: translate(0, -170%);*/
                 text-align: left;
                 color: white;
                 text-transform: uppercase;
@@ -162,42 +116,25 @@
             }
             #homeHeroTitle{
                 font-weight: 700;
-                margin-top: -11%;
+                position: absolute;
+                right: 19%;
+                top: 19%;
 
             }
             .home-hero-container h1{
                 font-family: sans-serif;
-                font-size: 81px;
+                font-size: 31px;
                 letter-spacing: 0.2rem;
                 margin: 0;
                 text-shadow: 0 0 10px #00000054;
             }
             .des {
-                margin: 20px;
                 display: block;
-                font-size: 26px;
+                font-size: 11px;
                 text-shadow: 0 0 10px black;
+                margin-top: 55px;
             }
-            .btnLgMobile {
-                color: #ffffff;
-                padding: 28px 100px;
-                text-decoration: none;
-                background: #f7d33f;
-                border-radius: 8px;
-                transition: 0.3s all;
-                font-size: 57px;
-                position: absolute;
-                font-weight: 900;
-                text-shadow: 0 0 10px #00000054;
-                transform: translate(4%, -105%);
-                box-shadow: 2px 2px 11px 7px rgb(0 0 0 / 20%);
-            }
-            .btnLgMobile:hover{
-                opacity: 0.8;
-            }
-            .mobileIconsMargin{
-                margin-bottom: 130px;
-            }
+
 
         }
     </style>
@@ -219,59 +156,61 @@
 
     <div id="homePageItemsRow" class="row">
         <div class="itemHomePage col-lg-3 col-md-6 col-sm-6 col-6">
-            <a href="{{ path('list-marques-categorie', {'id':1}) }}"> <img class="homeImageItems"
-                                                                           src="{{ asset('build/homePageItems/phone.png') }}">
+            <a href="{{ path('list-marques-categorie', {'id':1}) }}" aria-label="réparation de téléphone"> <img class="homeImageItems"
+                                                                           src="{{ asset('build/homePageItems/phone.png') }}" alt="liste maques categories">
             </a>
         </div>
         <div class="itemHomePage col-lg-3 col-md-6 col-sm-6 col-6">
-            <a href="{{ path('reparationOrdinateur') }}"> <img class="homeImageItems"
-                                                               src="{{ asset('build/homePageItems/ordiMackbook.png') }}">
+            <a href="{{ path('reparationOrdinateur') }}" aria-label="réparation de ordinateur"> <img class="homeImageItems"
+                                                               src="{{ asset('build/homePageItems/ordiMackbook.png') }}" alt="réparation ordinateur">
             </a>
         </div>
         <div class="itemHomePage col-lg-3 col-md-6 col-sm-6 col-6">
-            <a href="{{ path('reparationTablette') }}"> <img class="homeImageItems"
-                                                             src="{{ asset('build/homePageItems/tabPad.png') }}"> </a>
+            <a href="{{ path('reparationTablette') }}" aria-label="réparation de tablette"> <img class="homeImageItems"
+                                                             src="{{ asset('build/homePageItems/tabPad.png') }}" alt="réparation tablette"> </a>
         </div>
         <div class="itemHomePage col-lg-3 col-md-6 col-sm-6 col-6">
-            <a href="{{ path('clesMinute') }}"> <img class="homeImageItems"
-                                                     src="{{ asset('build/homePageItems/cels.png') }}"> </a>
+            <a href="{{ path('clesMinute') }}" aria-label="service clés minute"> <img class="homeImageItems"
+                                                     src="{{ asset('build/homePageItems/cels.png') }}" alt="cles minute"> </a>
         </div>
     </div>
 
 
 
-    <div class="container align-items-center btnMobileHomeContainer">
-        <button class="btn p-4 btnMobileHome btn  btn-lg w-100">
-            <a style="
-           font-size: 50px;
-    color: #2b2b2b;
-    text-decoration: none;
-    font-weight: bolder;
-    font-family: 'Lato';" href="{{ path('list-marques') }}">
-                <i style="color: white;" class="fa fa-arrow-right" aria-hidden="true"></i> <span
-                        style="    color: red; font-size: 54px; font-weight: lighter;"> Réparez</span> votre appareil
-                <br>
-            </a>
-            <span>
-                 <select  style="font-size: 37px; height: 80px;margin-top: 30px;"
-                         class="w-100 js-example-basic-single js-states form-control searchProd searchProdMobile">
-                   <option value="" disabled selected>Trouver mon appareil</option>
-                {% for marque in marques %}
-                    <optgroup>{{ marque.nom }}</optgroup>
-                    {% for produit in marque.produits %}
-                    <option value="{{ produit.id }}/{{ produit.nomUrl }}/">  {{ produit.nom }}  </option>
-                {% endfor %}
+{#    <div class="container align-items-center btnMobileHomeContainer">#}
+{#        <button class="btn p-4 btnMobileHome btn  btn-lg w-100">#}
+{#            <a style="#}
+{#           font-size: 50px;#}
+{#    color: #2b2b2b;#}
+{#    text-decoration: none;#}
+{#    font-weight: bolder;#}
+{#    font-family: 'Lato';" href="{{ path('list-marques') }}">#}
+{#                <i style="color: white;" class="fa fa-arrow-right" aria-hidden="true"></i> <span#}
+{#                        style="    color: red; font-size: 54px; font-weight: lighter;"> Réparez</span> votre appareil#}
+{#                <br>#}
+{#            </a>#}
+{#            <span>#}
+{#                 <select  style="font-size: 37px; height: 80px;margin-top: 30px;"#}
+{#                         class="w-100 js-example-basic-single js-states form-control searchProd searchProdMobile">#}
+{#                   <option value="" disabled selected>Trouver mon appareil</option>#}
+{#                {% for marque in marques %}#}
+{#                    <optgroup>{{ marque.nom }}</optgroup>#}
+{#                    {% for produit in marque.produits %}#}
+{#                    <option value="{{ produit.id }}/{{ produit.nomUrl }}/">  {{ produit.nom }}  </option>#}
+{#                {% endfor %}#}
 
-                {% endfor %}
-            </select>
-            </span>
-        </button>
-    </div>
+{#                {% endfor %}#}
+{#            </select>#}
+{#            </span>#}
+{#        </button>#}
+{#    </div>#}
 
-    <div id="sloganContent" class="yav-container">
-        <div class="container container-md container-sm">
+    <div id="sloganContent" class="p-1 p-lg-5 yav-container">
             <div class="row">
-                <div class="col-md-8 offset-md-4  col-lg-8 offset-lg-4  col-sm-12 offset-sm-4  col-xs-12 offset-xs-4 ">
+{#                <div class="col-12 col-sm-12 col-lg-4">#}
+{#                    <img class=" iphone-s1-6"   src="{{ asset("build/general/iphoneClined.png") }}"  alt="iphoneS1">#}
+{#                </div>#}
+                <div class="col-12">
                     <h1 class="fw-bold">Réparation Téléphone & Ordinateur & Tablette & clés minute sur Metz</h1>
                     <p class="mt-4 homeSloganText">
 
@@ -281,26 +220,23 @@
                     </p>
                 </div>
             </div>
-            <figure class="iphone-s1-6"><img style="width: 986px" src="{{ asset("build/general/iphoneClined.png") }}"
-                                             alt="iphoneS1"></figure>
-        </div>
     </div>
 
 
-    <div id="homePageDarkContainer" class="yav-container homeDarkPart yav-container-dark" >
+    <div id="homePageDarkContainer" class="yav-container homeDarkPart yav-container-dark " >
         <div class="container">
             <div class="row googleImageAndTextContainer">
                 <div class="col  d-flex flex-column justify-content-center align-items-center ">
                     <div> Les avis sur Google</div>
                     <img src="{{ asset("build/general/google_avis.png") }}" alt="googleAvis">
-                    <a href="https://www.google.com/search?q=R%C3%A9par%27+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+&client=firefox-b-d&sxsrf=ALeKk00hOxaW-GT5bYDQf_peK-qxXqswrQ%3A1620656812870&ei=rEKZYLS1NPKA9u8PqP-m8AY&oq=R%C3%A9par%27+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+&gs_lcp=Cgdnd3Mtd2l6EAMyCwgAEMcBEK8BEMsBMgIIJjoHCAAQRxCwA1C4NVi4NWCHOWgBcAJ4AIABwQuIAeAMkgEHMC4xLjctMZgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz&ved=0ahUKEwi0u4iNqb_wAhVygP0HHai_CW4Q4dUDCA4&uact=5">
+                    <a class="text-light" aria-label="Les avis de google" href="https://www.google.com/search?q=R%C3%A9par%27+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+&client=firefox-b-d&sxsrf=ALeKk00hOxaW-GT5bYDQf_peK-qxXqswrQ%3A1620656812870&ei=rEKZYLS1NPKA9u8PqP-m8AY&oq=R%C3%A9par%27+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+&gs_lcp=Cgdnd3Mtd2l6EAMyCwgAEMcBEK8BEMsBMgIIJjoHCAAQRxCwA1C4NVi4NWCHOWgBcAJ4AIABwQuIAeAMkgEHMC4xLjctMZgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=gws-wiz&ved=0ahUKEwi0u4iNqb_wAhVygP0HHai_CW4Q4dUDCA4&uact=5">
                         Voir tout les avis <i class="fa fa-external-link googleAvisLinkFa" aria-hidden="true"></i> </a>
 
                 </div>
 
             </div>
             <div class="row">
-                <div class="col mb-md-5 col-lg-4 col-md-12">
+                <div class="col-12 mb-3 mb-lg-0 mb-sm-3 mb-md-5 col-lg-4 col-md-12">
                     <div class="card cardGoogle">
                         <div class="row">
                             <div class="col  d-flex align-items-center justify-content-center">
@@ -328,7 +264,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col mb-md-5 col-lg-4 col-md-12">
+                <div class="col-12 mb-3 mb-lg-0 mb-sm-3 mb-md-5 col-lg-4 col-md-12">
                     <div class="card cardGoogle">
                         <div class="row">
                             <div class="col  d-flex align-items-center justify-content-center">
@@ -358,7 +294,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col mb-md-5 col-lg-4 col-md-12">
+                <div class="col-12 mb-3 mb-lg-0 mb-sm-3 mb-md-5 col-lg-4 col-md-12">
                     <div class="card cardGoogle">
                         <div class="row">
                             <div class="col  d-flex align-items-center justify-content-center">
@@ -389,7 +325,7 @@
         </div>
     </div>
 
-    <div id="sloganContent" class="yav-container">
+    <div id="sloganContent" class="yav-container ">
         <div class="container container-md container-sm">
             <div class="row">
                 <div class="col-md-8  col-lg-8  col-sm-12  col-xs-12 ">
@@ -402,13 +338,10 @@
                     </p>
                     <h2 style="font-weight: 900;color: #bb0000;font-style: italic; margin-bottom: 60px" class="clesMinuteH1First"> Meilleur service clés minute de Metz ! </h2>
 
-                    <link rel="preconnect" href="https://fonts.gstatic.com">
-                    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
                     <button id="homeCliesMinuteButton" >Ouvert 6 jours sur 7 </button>
                 </div>
                 <div class="col-4">
-                    <img  class="img-circle" src="{{ asset("build/services/clefminute/cle-point.png") }}" alt="">
+                    <img  class="img-circle" src="{{ asset("build/services/clefminute/cle-point.png") }}" alt="image de clas">
                 </div>
             </div>
         </div>
@@ -420,9 +353,9 @@
                 de batterie ou boutons smartphone. Réparation d'ordinateur et tablette. Vente d'accessoires téléphone.
                 achat et vente des smartphones</p>
             <div class="row">
-                <div class="col-md-12 text-center">
+                <div class="col-12 col-md-12 col-sm-12 p-sm-0 text-center">
                     <div class="row iphone-features-cont">
-                        <div class=" col-lg-3 col-md-2 col-sm-2 col-xs-2  helo">
+                        <div class=" col-lg-3 col-3 col-md-2 col-sm-3 col-xs-3  helo">
                             <div class="iphone-details left text-right">
                                 <h4 class="h-bold">Votre téléphone n'a plus d'image ?</h4>
                             </div>
@@ -430,15 +363,15 @@
                                 <h4 class="h-bold">Votre cellulaire ne charge plus ?</h4>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-8 col-sm-4">
-                            <a target="_blank"
+                        <div class="col-6 col-lg-6 col-md-8 col-sm-6">
+                            <a  aria-label="lien vers google maps" target="_blank"
                                href="https://www.google.com/maps/place/R%C3%A9par'+%26+Go+-+R%C3%A9paration+T%C3%A9l%C3%A9phone+%26+Ordinateur+%26+Tablette/@49.1158957,6.1719842,394m/data=!3m1!1e3!4m5!3m4!1s0x0:0x3577dc2fb7cc5cd1!8m2!3d49.1161085!4d6.1723196?hl=fr">
                                 <figure class="iphone-s3 show"><img
                                             src="{{ asset("build/homepage/iphone-4-2-darkMap.webp") }}"
                                             alt="reparationMetz"></figure>
                             </a>
                         </div>
-                        <div class="col-lg-3 col-md-2 col-sm-2">
+                        <div class="col-lg-3 col-md-2 col-3 col-sm-3">
                             <div class="iphone-details right text-left">
                                 <h4 class="h-bold">Votre téléphone ne s'allume plus ? </h4>
                             </div>
@@ -453,7 +386,7 @@
     </div>
 
 
-    {{ encore_entry_script_tags('homePage') }}
+{#    {{ encore_entry_script_tags('homePage') }}#}
 
 
 {% endblock %}

@@ -346,20 +346,10 @@ nav.main ul li.fade-service:hover div {
 
 
 .iphone-s1-6 {
-    -webkit-transform: translate(-67%, -54%);;
-    -ms-transform: translate(-67%, -54%);;
-    transform: translate(-67%, -54%);;
-    opacity: 0;
-    margin-bottom: -451px;
-    -webkit-transition: 1s .3s;
-    transition: 1s .3s;
+    width: auto;
+    height: auto
 }
-.iphone-s1-6.show {
-    -webkit-transform: translate(-46%, -47%);
-    -ms-transform: translate(-46%, -47%);
-    transform: translate(-46%, -47%);
-    opacity: 1;
-}
+
 
 
 
@@ -423,9 +413,9 @@ nav.main ul li.fade-service:hover div {
     opacity: 1;
 }
 
-.iphone-features-cont {
-    margin-bottom: -80px;
-}
+/*.iphone-features-cont {*/
+/*    margin-bottom: -80px;*/
+/*}*/
 
 
 
@@ -441,7 +431,6 @@ nav.main ul li.fade-service:hover div {
 }
 .iphone-details p {
     font-size: 19px;
-    font-family: 'Cabin-Regular';
 }
 .iphone-details:before, .iphone-details:after {
     content: '';
@@ -978,7 +967,7 @@ le page produit*/
 
 .secondTextHomePage{
     font-size: 17px;
-    padding: 0 81px;
+    padding: 0 24px;
     font-weight: 400;
 }
 
@@ -999,8 +988,21 @@ le page produit*/
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
+
+    .iphone-details h4 {
+        font-size: 14px;
+    }
+
+    .iphone-details:nth-of-type(1), .iphone-details:nth-of-type(3) {
+        margin-top: 33px;
+    }
+
+    .iphone-details:nth-of-type(2), .iphone-details:nth-of-type(4) {
+        margin-top: 74px;
+    }
+
     .logoMobile{
-        width: 130%;
+        width: 74%;
         display: block;
         height: auto;
     }
@@ -1053,7 +1055,7 @@ and (max-device-width : 480px) {
     }
 
     .navbar {
-        height: 200px;
+        height: 58px;
     }
 
 
@@ -1067,8 +1069,13 @@ and (max-device-width : 480px) {
         display: block;
     }
     .responsiveMenuBar{
-        font-size: 77px; cursor: pointer; position: absolute; color: white;float: right;right: 57px;
+        color: #fff;
+        cursor: pointer;
         display: block;
+        float: right;
+        font-size: 36px;
+        position: absolute;
+        right: 23px;
     }
 
     .sidenav {
@@ -1107,7 +1114,7 @@ and (max-device-width : 480px) {
     }
 
     .navbar{
-        height: 160px;
+        height: 86px;
     }
 
     .hero-image {
@@ -1117,30 +1124,31 @@ and (max-device-width : 480px) {
         max-width: 100%;
     }
     .yav-container .container h1{
-        font-size: 77px;
+        font-size: 17px;
     }
     .yav-container .container p{
-        font-size: 35px;
+        font-size: 17px;
     }
     .yav-container {
-        padding: 114px 0 181px 0;
+        /*padding: 114px 0 181px 0;*/
+        padding: 20px 0 15px 0;
     }
     .title-homePage-dark{
-        font-size: 60px;
+        font-size: 23px;
     }
 
     .page-footer h5{
-        font-size: 59px;
+        font-size: 20px;
     }
     .page-footer h6{
-        font-size: 38px;
+        font-size: 13px;
     }
     .page-footer i{
-        font-size: 100px;
-        margin-right: 10px;
+        font-size: 84%;
+        /*margin-right: 10px;*/
     }
     .page-footer em{
-        font-size: 33px;
+        font-size: 23px;
     }
 
 
@@ -1169,7 +1177,7 @@ and (max-device-width : 480px) {
         font-size: 35px;
     }
     h1 {
-        font-size: 58px;
+        font-size: 24px;
     }
     h2 {
         font-size: 3.0vh;
@@ -1181,7 +1189,7 @@ and (max-device-width : 480px) {
         font-size: 2vh;
     }
     p {
-        font-size: 35px;
+        font-size: 17px;
     }
     .fa{
         font-size: 73px;
@@ -1205,7 +1213,7 @@ and (max-device-width : 480px) {
     .phone-card-text{
         text-align: center;
         margin: -24px 0 0 0;
-        font-size: 18px;
+        font-size: 31px;
         font-weight: 300;
     }
 
@@ -1262,6 +1270,7 @@ and (max-device-width : 480px) {
         position: relative;
         top: -55px;
         font-size: 16px;
+        color: white;
     }
     .googleAvisLinkFa {
         font-size: 18px;
@@ -1272,13 +1281,13 @@ and (max-device-width : 480px) {
         top: -16px;
         width: 278px;
     }
-    .iphone-s1-6 {
-        margin-bottom: -451px;
-        opacity: 1;
-        -webkit-transform:translate(-50%,-84%) rotate(31deg);
-        -ms-transform: translate(-50%,-84%) rotate(31deg);
-        transform: translate(-50%,-84%) rotate(31deg);
-    }
+    /*.iphone-s1-6 {*/
+    /*    margin-bottom: -451px;*/
+    /*    opacity: 1;*/
+    /*    -webkit-transform:translate(-50%,-84%) rotate(31deg);*/
+    /*    -ms-transform: translate(-50%,-84%) rotate(31deg);*/
+    /*    transform: translate(-50%,-84%) rotate(31deg);*/
+    /*}*/
 
     .marqueButtonsFa{
         font-size: 130px;
@@ -1334,12 +1343,12 @@ and (-webkit-min-device-pixel-ratio: 1) { /* portrait tablets, portrait iPad, la
         position: absolute;
         right: 57px;
     }
-    .iphone-s1-6.show {
-        opacity: 1;
-        -webkit-transform: translate(-80%,-47%);
-        -ms-transform: translate(-80%,-47%);
-        transform: translate(-80%,-47%);
-    }
+    /*.iphone-s1-6.show {*/
+    /*    opacity: 1;*/
+    /*    -webkit-transform: translate(-80%,-47%);*/
+    /*    -ms-transform: translate(-80%,-47%);*/
+    /*    transform: translate(-80%,-47%);*/
+    /*}*/
     .respMenuLink{
         font-size: 48px;
         text-decoration: none;
