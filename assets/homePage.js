@@ -2,6 +2,8 @@
 
 import $ from 'jquery'
 import peScrollChange from './peScroll'
+import 'select2/dist/css/select2.css'
+import select2 from 'select2/dist/js/select2'
 
 
 
